@@ -8,8 +8,7 @@ def get_birthdays_per_week(users):
         birthday = user["birthday"].date()  # Конвертуємо час народження до типу date, видаляючи часову частину.
         birthday_this_year = birthday.replace(year=today.year) # Рядок використовує метод replace() для заміни значення року у даті на значення поточного року (today.year).
         if  birthday_this_year < today(): #Перевіряємо, чи вже минув день народження цього року
-            delta_days = (birthday_this_year - today).days. # Якщо так, то розглядаємо дату на наступний рік, це треба у birthday_this_year використовуючи метод replace
-            # збільшити рік на одиничку.
+            delta_days = (birthday_this_year - datetime.today()).days
 
 
 
